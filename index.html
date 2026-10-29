@@ -89,6 +89,13 @@
       <input id="phone" required placeholder="Ej. 216-555-0100">
       <label for="date">Fecha y hora que prefieres</label>
       <input id="date" type="datetime-local" required>
+      <label for="lang">¿En qué idioma necesitas ayuda?</label>
+      <select id="lang" required>
+        <option value="">Elige un idioma…</option>
+        <option>Español</option>
+        <option>English</option>
+        <option>Português</option>
+      </select>
       <label for="notes">Detalles (lugar, tipo de cita, idioma)</label>
       <textarea id="notes" rows="3" placeholder="Cuéntanos brevemente qué necesitas…"></textarea>
       <p id="total" style="font-weight:800;color:#ff5a1f"></p>
@@ -132,6 +139,7 @@
     const msg = 'Hola Gabriel, quiero reservar un servicio:%0A' +
       'Folio: ' + folio + '%0A' +
       'Servicio: ' + encodeURIComponent(opt.text) + '%0A' +
+      'Idioma en el que necesita ayuda: ' + encodeURIComponent(document.getElementById('lang').value) + '%0A' +
       'Nombre: ' + encodeURIComponent(document.getElementById('name').value) + '%0A' +
       'Teléfono: ' + encodeURIComponent(document.getElementById('phone').value) + '%0A' +
       'Fecha preferida: ' + encodeURIComponent(document.getElementById('date').value) + '%0A' +
